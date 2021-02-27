@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lato:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(rgba(0, 0, 0, .7), rgba(1, 1, 1, .7)), url("../images/hero-img.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Caveat', cursive;
+    font-size: 62.5%;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Header */
+
+#header .navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#header .navbar.top {
+    background-color: transparent;
+}
+
+#header .navbar .logo-img{
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    margin: 1rem;
+    transition: transform 5s;
+    animation: logo-animation 1s ease-out backwards;
+}
+
+#header .navbar .logo-img:hover {
+    transform: rotateY(360deg) rotateX(180deg);
+}
+
+#header .navbar .navbar-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    animation: navbar-animation 1s ease-out backwards;
+}
+
+#header .navbar .navbar-links ul li{
+    padding: 2rem;
+    margin: 0 1rem 0;
+    opacity: 1;
+}
+
+#header .navbar .navbar-links ul li a {
+    transition: all 1s ease-out;
+}
+
+#header .navbar .navbar-links ul li a:hover{
+    color: #c7c7c7;
+}
+
+#header .mobile-icons {
+    position: fixed;
+    top: 2rem;
+    right: 5%;
+    font-size: 0;
+    animation: navbar-animation 2s ease-out backwards;
+}
+
+#header .mobile-icons a{
+  margin: 2rem;
+}
+
+#header .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+}
+
+#header .content h1{
+    font-size: 8rem;
+}
+#header .content h2{
+    font-weight: 10;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+}
+
+#header .content .hero-primary {
+    animation: hero-animation-primary 2s linear 3s backwards;
+}
+
+#header .content .hero-name {
+    animation: hero-name-animation 1s ease-in-out 2s backwards;
+}
+
+#header .content .hero-text {
+    animation: hero-animation-text 2s linear 3s backwards;
+}
+
+/* Education */
+
+#education {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#education .school-logo-container .school-logo{
+    height: 20rem;
+    padding: 0 2vh;
+}
+
+#education .text-container {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#education .text-container .section-title {
+    width: 50%;
+    margin: auto;
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+    padding-bottom: 4%;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+#education .text-container .section-text {
+    height: 50%;
+    width: 90%;
+    font-size: 2rem;
+    padding: 4%;
+    text-align: center;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+/* Skills */
+
+#skills .specials-container .specials{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#skills .specials-container .specials .html-logo {
+    color: #e34c26;
+}
+
+#skills .specials-container .specials .css-logo {
+    color: #264de4;
+}
+
+#skills .specials-container .specials .bootstrap-logo {
+    color: #563d7c;
+}
+
+#skills .specials-container .specials .js-logo {
+    color: #f0db4f;
+}
+
+#skills .section-title{
+    width: 80%;
+    margin: auto;
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+    padding: 5rem 0 5rem;
+}
+
+#skills .section-text{
+    font-size: 2rem;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+/* Skills/Achievements */
+
+#achievements-container .achievements .skills,
+#achievements-container .achievements .karate {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10rem;
+}
+
+#achievements-container .achievements .skills .section-text,
+#achievements-container .achievements .karate .section-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50vh;
+}
+
+#achievements-container .achievements .karate .section-text {
+    padding-right: 30%;
+}
+
+#achievements-container .achievements .karate{
+    flex-direction: row-reverse;
+}
+
+#achievements-container .achievements .skills .images,
+#achievements-container .achievements .karate .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+}
+
+#achievements-container .achievements .skills .images .img,
+#achievements-container .achievements .karate .images .img {
+    position: relative;
+    border: 1vh blue solid;
+    width: 20%;
+}
+
+#achievements-container .achievements .skills .images .img:hover {
+    z-index: 3;
+    transform: scale(2);
+    border: 1vh blue solid;
+}
+
+#achievements-container .achievements .karate .images .img {
+    border: 5px royalblue solid;
+    width: 20%;
+}
+
+#achievements-container .achievements .karate .images .img:hover {
+    z-index: 3;
+    transform: scale(2);
+    border: 5px royalblue solid;
+}
+
+#achievements-container .achievements .karate .images .img:hover {
+    transform: scale(2.2);
+}
+
+#achievements-container .achievements .skills .images .img-1,
+#achievements-container .achievements .karate .images .img-1 {
+    top: -10%;
+    left: 5%;
+}
+
+#achievements-container .achievements .karate .images .img-1:hover {
+    transform: scale(2.8);
+}
+
+#achievements-container .achievements .skills .images .img-2,
+#achievements-container .achievements .karate .images .img-2 {
+    top: 10%;
+}
+
+#achievements-container .achievements .skills .images .img-3,
+#achievements-container .achievements .karate .images .img-3 {
+    top: -10%;
+    left: -5%;
+}
+
+/* Contact */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+#contact .section-title {
+    font-size: 3.5rem;
+}
+
+#contact .contact-form label {
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    overflow: hidden;
+    margin: 0.5rem 0 1rem;
+}
+
+#contact .contact-form textarea {
+    font-size: 1.15rem;
+    overflow: auto;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    outline:royalblue 2px solid;
+}
+
+#contact .contact-form .btn {
+    padding: 15px 40px;
+    margin:  2rem 0;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgba(65, 105, 225, 0.7);
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    margin: 1rem 0 10rem;
+}
+
+#contact .contact-form .btn:hover {
+    background-color: rgba(65, 105, 225, 0.5);  
+}
+
+/* Footer */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(1, 1, 1, 1);
+    height: 10rem;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Aniimations */
+
+@keyframes logo-animation { 
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes navbar-animation {
+    0% {
+        transform: translateY(-100rem);
+        opacity: 0;
+    }    
+
+    100% {
+        transform: translateY(0);
+        top: 0;
+    }
+}
+
+@keyframes hero-animation-primary {
+    0% {
+        transform: translateX(-15rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(2rem);
+        opacity: 1;
+    } 
+
+    100% {
+        top: 0;
+    } 
+}    
+
+@keyframes hero-name-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hero-animation-text {
+    0% {
+        transform: translateX(15rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-2rem);
+        opacity: 1;
+    } 
+
+    100% {
+        top: 0;
+    } 
+}
+
+@media only screen and (max-width:895px) {
+
+/* Header */
+
+ #header .content{
+    display: flex;
+    flex-direction: column;
+ }
+
+ #header .navbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 10;
+ }
+
+ #header .navbar .logo-img {
+    top: 0;
+    left: 45%;
+    height: 4rem;
+ }
+
+ #header .navbar .navbar-links ul{
+    display: flex;
+    align-items: flex-end;
+    height: 10rem;
+ }
+
+ #header .content{
+   text-align: center;
+ }
+
+ /* Education */
+
+ #education {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+ }
+
+ #education .school-logo-container .school-logo{
+    width: 100%;    
+ }
+
+ #education .text-container .section-text {
+    text-align: center;
+ }
+
+ /* Skills */
+
+ #skills .section-title{
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+    margin: auto;
+ }
+
+ #skills .section-text{
+    font-size: 2rem;
+ }
+
+ /* Skills/Achievements */
+
+ #achievements-container .achievements .skills,
+ #achievements-container .achievements .karate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    padding: 10rem;
+ }
+
+ #achievements-container .achievements .skills {
+     padding: 0 0 10rem;
+ }
+
+ #achievements-container .achievements .skills .section-text,
+ #achievements-container .achievements .karate .section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: block;
+ }
+
+ #achievements-container .achievements .karate .section-text {
+    display: block;
+    padding-right: 0;
+ }
+
+ #achievements-container .achievements .skills .images,
+ #achievements-container .achievements .karate .images {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 1rem;
+    padding: 53rem 0rem 40rem 0rem;
+ }
+
+ #achievements-container .achievements .karate .images {
+    padding: 40rem 0rem;
+ }
+
+ #achievements-container .achievements .skills .images .img,
+ #achievements-container .achievements .karate .images .img {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+ }
+
+ #achievements-container .achievements .skills .images .img:hover {
+    transform: none;
+ }
+
+ #achievements-container .achievements .karate .images .img:hover {
+    transform: none;
+ }
+
+ #achievements-container .achievements .karate .images .img:hover {
+    transform: none;
+ }
+
+ #achievements-container .achievements .karate .images .img-1:hover {
+    transform: none;
+ }
+
+ #achievements-container .achievements .skills .images .img-1,
+ #achievements-container .achievements .karate .images .img-1,
+ #achievements-container .achievements .skills .images .img-2,
+ #achievements-container .achievements .karate .images .img-2,
+ #achievements-container .achievements .skills .images .img-3,
+ #achievements-container .achievements .karate .images .img-3 {
+    top: 0;
+    left: 0;
+ }
+
+ #contact {
+    width: 80%;
+ }
+}
+
+@media only screen and (max-width:630px) {
+
+    /* Header */
+
+    #header .navbar{
+        height: 6rem;
+    }
+    
+    #header .navbar .logo-img{
+        top: 0;
+        left: 0;
+    }
+    
+    #header .navbar .navbar-links ul{
+        opacity: 1;
+    }
+
+    #header .navbar .navbar-links ul li {
+        position: absolute;
+        z-index: -100;
+        left: 1000vh;
+    }
+
+    #header .mobile-icons {
+        font-size: 1.8rem;
+    }
+
+    #skills .section-text{
+       width: 99%;
+    }
+
+    #contact {
+        width: 80%;
+    }
+
+}

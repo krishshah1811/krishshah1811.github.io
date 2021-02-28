@@ -618,3 +618,106 @@ ul{
     }
 
 }
+
+@media only screen and (max-width:360px) {
+
+    /* Header */
+      
+   #header .content{
+      height: 45rem;
+      /* width: 100%; */
+      margin: 0 auto;
+   }
+  
+   #header .navbar{
+      display: flex;
+      justify-content: space-between;
+      height: 10rem;
+   }
+  
+   #header .navbar .logo-img {
+      left: 30%;
+   }
+  
+   #header .navbar .navbar-links ul{
+      display: flex;
+      align-items: center;
+      animation-fill-mode: forwards;
+      height: 10rem;
+   }
+  
+   #header .mobile-icons {
+      top: 6rem;
+      left: 1%;
+   }
+  
+   #header .mobile-icons a{
+     margin: 1.5rem;
+   } 
+  
+   #header .content .hero-primary {
+      animation: hero-animation-primary-2 2s linear 3s backwards;
+   }
+  
+   #header .content .hero-text {
+      animation: hero-animation-text-2 2s linear 3s backwards;
+   }
+   
+   #achievements-container .achievements .skills .section-text,
+   #achievements-container .achievements .karate .section-text {
+      left: 50%;
+   }
+  
+   #achievements-container .achievements .karate .section-text {
+      padding-right: 50%;
+      width: 100%;
+      display: block;
+      margin: auto;
+   }
+   
+   #achievements-container .achievements .skills .images {
+      padding: 40rem 0 20rem;
+   }
+  
+   #achievements-container .achievements .karate .images {
+      padding: 30rem 0 30rem;
+   }
+  
+   #achievements-container .achievements .skills .images .img,
+   #achievements-container .achievements .karate .images .img {
+      width: 20rem;
+   }
+  
+   @keyframes hero-animation-primary-2 { 
+      0% {
+          transform: translateX(10rem);
+          opacity: 0;
+      }
+  
+      50% {
+          transform: translateX(-2rem);
+          opacity: 1;
+      } 
+  
+      100% {
+          top: 0;
+      } 
+   }
+  
+   @keyframes hero-animation-text-2 { 
+      0% {
+          transform: translateX(-10rem);
+          opacity: 0;
+      }
+  
+      50% {
+          transform: translateX(2rem);
+          opacity: 1;
+      } 
+  
+      100% {
+          top: 0;
+      } 
+   }
+  
+  }
